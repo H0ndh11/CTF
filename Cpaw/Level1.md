@@ -23,8 +23,8 @@ cpaw{Caesar_cipher_is_classical_cipher}
 ## Q7.\[Reversing\] Can you execute ?
 拡張子のないファイルを渡され，どうにかして実行してFlagを入手したい．まずは，LinuxやUnix環境(Windowsの人はVMやSygwinを利用)でターミナルを開いて，`file`コマンドを使ってファイル形式を調べる．  
 ![Q7fileコマンド](https://user-images.githubusercontent.com/64766627/165731752-63fe55bd-f72f-4d41-ae8d-3ffef3637677.JPG)
-するとこのように，`ELFファイル`であることが判明する．ELFファイルについて調べてみると，Linux環境で実行できるようだ，  
-よって
+するとこのように，`ELFファイル`であることが判明する．ELFファイルについて調べてみると，windowsにおけるexeファイルような立ち位置で，Linux環境で実行できるファイルのようだ，  
+よって，Linuxターミナルで`./exec_me`と打つだけで実行され，Flagが得られる．  
 <details>
 <summary>Q6のこたえ</summary>
 
