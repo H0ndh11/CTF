@@ -69,3 +69,21 @@ cpaw{Th1s_f1le_c0uld_be_0p3n3d}
 
 ---
 <br><br>
+
+<a id="q9"></a>
+
+## Q9.\[Web\] HTML Page
+Webサイトからフラグを探す問題．親切にもHTMLについての説明がされているので，対象のWebサイトに飛んだら<br>
+右クリック->ページのソースを表示<br>
+からHTMLを確認する．この中のどこかにFlagがあるので探す．面倒なら**ctrl + F** でページ内検索できるのでcpawと入力すれば一瞬で見つかる．<br>
+
+
+<details>
+<summary>Q9のこたえ</summary>
+
+cpaw{9216ddf84851f15a46662eb04759d2bebacac666}<br><br>flagの中身が全て16進数で書かれてるから，ASCIIとかでメッセージが隠されてるのかなって思ったけど，解読できない...<br>
+特に意味はないのだろうか？
+</details> 
+
+---
+<br><br>
