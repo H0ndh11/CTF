@@ -5,6 +5,9 @@
   - [Q8.\[Misc\] Can you open this file ?](#q8)
   - [Q9.\[Web\] HTML Page](#q9)
   - [Q10.\[Forensics\] River](#q10)
+  - [Q11.\[Network\] pcap](#q11)
+  - [Q12.\[Crypto\] HashHashHash](#q12)
+  - [Q14.\[PPC\] 並べ替えろ！](#q14)
 ---
 <br><br>
 <a id="q1"></a>
@@ -106,12 +109,12 @@ cpaw{9216ddf84851f15a46662eb04759d2bebacac666}<br><br>flagの中身が全て16�
 <summary>Q10のこたえ</summary>
 
 cpaw{koutsukigawa}<br><br>kotsukigawaじゃないので注意
-</details> 
+</details>
 
 ---
 <br><br>
 
-<a id="Q11"></a>
+<a id="q11"></a>
 
 ## Q11.\[Network\] pcap
 pcapファイルの解析なので，Wireshark必須．開いてみるとこのような画面に<br><br>
@@ -126,7 +129,29 @@ pcapファイルの解析なので，Wireshark必須．開いてみるとこの�
 <summary>Q11のこたえ</summary>
 
 cpaw{gochi_usa_kami}<br><br>「ごちうさ」ってアニメか漫画かであったよね
-</details> 
+</details>
 
 ---
 <br><br>
+
+<a id="q12"></a>
+
+## Q12.\[Crypto\] HashHashHash
+SHA1というアルゴリズムで生成されたハッシュ値`e4c6bced9edff99746401bd077afa92860f83de3`を戻そう．問題文に従い，解読できそうなWebサイトを探してみる．筆者が使ったのはここ(https://hashtoolkit.com/)<br><br>
+![キャプチャ](https://user-images.githubusercontent.com/64766627/166934481-cef71c7a-b53a-4cb9-b5b2-ef5214169bd3.JPG)
+<br><br>
+上の入力欄にそのままコピペすると，AlgorismがSHA1と書かれた行のDecryptedに結果が表示されている．
+
+<details>
+<summary>Q12のこたえ</summary>
+
+cpaw{Shal}<br><br>最後の文字は1じゃないよ
+</details>
+
+---
+<br><br>
+
+<a id="q14"></a>
+
+## Q14.\[PPC\] 並べ替えろ！
+Level1最後の問題はプログラミング．やり方はいくつかあると思うけど，筆者はjavaで以下のプログラムを組んだよ．
