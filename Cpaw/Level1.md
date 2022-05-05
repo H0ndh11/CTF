@@ -110,3 +110,23 @@ cpaw{koutsukigawa}<br><br>kotsukigawaじゃないので注意
 
 ---
 <br><br>
+
+<a id="Q11"></a>
+
+## Q11.\[Network\] pcap
+pcapファイルの解析なので，Wireshark必須．開いてみるとこのような画面に<br><br>
+![キャプチャ](https://user-images.githubusercontent.com/64766627/166931157-3a87fa58-953a-4087-90cd-ba2f37ae5434.JPG)
+<br><br>
+今回はパケットが2つしか存在しないようなので，上からダブルクリックして確認してみる．<br><br>
+![キャプチャ](https://user-images.githubusercontent.com/64766627/166931550-0c75a1c8-4bed-450b-9025-2fef30430d15.JPG)
+<br><br>
+すると明らかにペイロード部分にflagと思われる文字列が見つかる．
+
+<details>
+<summary>Q11のこたえ</summary>
+
+cpaw{gochi_usa_kami}<br><br>「ごちうさ」ってアニメか漫画かであったよね
+</details> 
+
+---
+<br><br>
