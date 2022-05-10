@@ -154,7 +154,7 @@ cpaw{Shal}<br><br>最後の文字は1じゃないよ
 <a id="q14"></a>
 
 ## Q14.\[PPC\] 並べ替えろ！
-Level1最後の問題はプログラミング．やり方はいくつかあると思うけど，筆者はPythonで以下のプログラムを組んだよ．<br><br>
+Level1最後の問題はプログラミング．やり方はいくつかあると思うけど，筆者はPythonで以下のプログラムを組んだよ．コードのみは[こちら](https://github.com/Hondhii/CTF/blob/main/Cpaw/q14.py)<br><br>
 ![キャプチャ](https://user-images.githubusercontent.com/64766627/166938246-94e1af4a-bac0-4a6a-92ad-e20c3dbc73a4.JPG)
 <br><br>
 pythonはソートしてくれる関数があるからコード書くのが楽でいいね！あとはcpaw{}を付ければ完成．Level1終了！お疲れさま！
