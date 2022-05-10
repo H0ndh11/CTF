@@ -2,6 +2,7 @@
 - [Level2](#level2)
   - [Q13.\[Stego\] 隠されたフラグ](#q13stego-隠されたフラグ)
   - [Q15.\[Web\] Redirect](#q15web-redirect)
+  - [Q16.\[Network+Forensic\] HTTP](#q16networkforensic-http)
   
 ---
 <br><br>
@@ -41,3 +42,10 @@ cpaw{4re_y0u_1ook1ng_http_h3ader?}<br><br>
 
 ---
 <br><br>
+
+## Q16.\[Network+Forensic\] HTTP
+Wireshark必須．pcapファイルからページを復元する問題．ひとまず開いてみよう．<br><br>
+![キャプチャ](https://user-images.githubusercontent.com/64766627/167654313-be2fcb5f-0f11-4a57-9acb-377758f9d859.JPG)<br><br>
+とにかくパケットが多い．でもWiresharkならHTTPパケットからWebページを復元してくれる超便利な機能があるので安心だね．<br><br>
+<img width="960" alt="tempsnip" src="https://user-images.githubusercontent.com/64766627/167655295-b6a3401e-f564-415e-81b3-7cca4629fe4f.png"><br><br>
+ポップアップが表示されるのですべて保存をクリック．
