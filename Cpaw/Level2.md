@@ -1,11 +1,12 @@
 # Level2
 - [Level2](#level2)
-  - [- [Q13.\[Stego\]隠されたフラグ](#q13stego隠されたフラグ)](#--q13stego隠されたフラグ)
-  - [Q13.\[Stego\]隠されたフラグ](#q13stego隠されたフラグ)
+  - [Q13.\[Stego\] 隠されたフラグ](#q13stego-隠されたフラグ)
+  - [Q15.\[Web\] Redirect](#q15web-redirect)
+  
 ---
 <br><br>
 
-## Q13.\[Stego\]隠されたフラグ
+## Q13.\[Stego\] 隠されたフラグ
 次のグラフのFlagが隠されているそうだ<br><br>
 ![steg10](https://user-images.githubusercontent.com/64766627/167430968-ed5b2eb3-3f5b-4091-b10a-554d6eeebd77.jpg)<br><br>
 画像の左上の右下をよく見ると汚れみたいなのが付いてるので，拡大してみる．<br><br>
@@ -19,3 +20,24 @@ cpaw{hidden_message:)}<br><br>問題文に書かれている通り回答は小�
 </details> 
 
 ---
+<br><br>
+
+## Q15.\[Web\] Redirect
+渡されたURLにアクセスすると，リダイレクトされてクリックしたはずのURLと異なるページに飛ばされる．リダイレクトの様子を確認するために，URLをクリックする前に(chromeなら)画面上で<br>右クリック->検証<br>
+でデベロッパーツールを開く．そしてネットワークタブを開く．そしたら次のような画面になるはず．<br><br>
+![キャプチャ](https://user-images.githubusercontent.com/64766627/167562372-ea01e58c-53bc-4e11-9465-7acc6a029d34.JPG)<br><br>
+この画面が表示できたら，問題に書かれているURLをクリックしてみよう．<br><br>
+![キャプチャ](https://user-images.githubusercontent.com/64766627/167562796-1a094d9f-cc1c-47fc-b020-3632a56ba6bc.JPG)<br><br>
+このように，ネットワークアクティビティに受け取ったデータがいくつか表示されている．最初に受け取ったq15.ctf.cpaw.siteを確認してみる．<br><br>
+![tempsnip](https://user-images.githubusercontent.com/64766627/167563481-3bbeb4e8-f356-4a65-b9ed-ded8f861a478.png)<br><br>
+なんとヘッダーにFlagが載っていた．
+
+<details>
+<summary>Q15のこたえ</summary>
+
+cpaw{4re_y0u_1ook1ng_http_h3ader?}<br><br>
+ステータスコード:302はリダイレクト，すなわちユーザーが取得しようとしたページが一時的に別の場所に移されていることを示している．
+</details> 
+
+---
+<br><br>
