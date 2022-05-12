@@ -3,6 +3,7 @@
   - [Q13.\[Stego\] 隠されたフラグ](#q13stego-隠されたフラグ)
   - [Q15.\[Web\] Redirect](#q15web-redirect)
   - [Q16.\[Network+Forensic\] HTTP](#q16networkforensic-http)
+  - [Q17.\[Recon\] Who am I ?](#q17recon-who-am-i-)
   
 ---
 <br><br>
@@ -48,4 +49,26 @@ Wireshark必須．pcapファイルからページを復元する問題．ひと�
 ![キャプチャ](https://user-images.githubusercontent.com/64766627/167654313-be2fcb5f-0f11-4a57-9acb-377758f9d859.JPG)<br><br>
 とにかくパケットが多い．でもWiresharkならHTTPパケットからWebページを復元してくれる超便利な機能があるので安心だね．<br><br>
 <img width="960" alt="tempsnip" src="https://user-images.githubusercontent.com/64766627/167655295-b6a3401e-f564-415e-81b3-7cca4629fe4f.png"><br><br>
-ポップアップが表示されるのですべて保存をクリック．
+ポップアップが表示されるのですべて保存をクリック．これにより閲覧していたであろうWebぺージを見るためのデータが全て手に入った．htmlファイルを開いてみよう．2つあるが，どちらかを開くと以下の画面が表示され，ボタンを押せばFlagが手に入る．<br><br>
+![キャプチャ](https://user-images.githubusercontent.com/64766627/168066248-384d0400-ccea-48e7-9d47-e54de6903ece.JPG)<br><br>
+
+<details>
+<summary>Q16のこたえ</summary>
+
+cpaw{Y0u_r3st0r3d_7his_p4ge}
+</details>
+
+---
+<br><br>
+
+## Q17.\[Recon\] Who am I ?
+twitterで検索するのも一苦労なので，google検索しちゃおう．アカウント名とスペシャルフォース2というキーワードが入っていれば上の方に出てくるはず．
+
+<details>
+<summary>Q17のこたえ</summary>
+
+cpaw{parock}
+</details>
+
+---
+<br><br>
