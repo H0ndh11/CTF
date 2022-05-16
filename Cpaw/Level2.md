@@ -4,6 +4,7 @@
   - [Q15.\[Web\] Redirect](#q15web-redirect)
   - [Q16.\[Network+Forensic\] HTTP](#q16networkforensic-http)
   - [Q17.\[Recon\] Who am I ?](#q17recon-who-am-i-)
+  - [Q18.\[Forensic\] leaf in forest](#q18forensic-leaf-in-forest)
   
 ---
 <br><br>
@@ -68,6 +69,27 @@ twitterで検索するのも一苦労なので，google検索しちゃおう．�
 <summary>Q17のこたえ</summary>
 
 cpaw{parock}
+</details>
+
+---
+<br><br>
+
+## Q18.\[Forensic\] leaf in forest
+ファイルの中からFlagを探す問題．まずはいつも通りfileコマンドでフォーマットを調べてみると，どうやらpcapファイルらしい．Wiresharkで開くと，エラーが出て開けない．そこで，`string`コマンドを試してみる．(メモ帳で開くこともできるみたい)<br><br>
+![キャプチャ](https://user-images.githubusercontent.com/64766627/168524689-266d8f36-4647-4032-8ae1-01b0c0e7b8e4.png)<br><br>
+すると同じような文字列が大量に表示される．良く見てみると大文字がいくつか見つかるので，まずは邪魔な単語を消していく．メモ帳でやると楽．linuxターミナルでやるなら<br>
+`sed -i s/love//g misc100`<br>
+`sed -i s/live//g misc100`<br>
+`sed -i s/\!//g misc100`<br>
+loveとliveと!を消すと大分スッキリする．<br><br>
+![キャプチャ](https://user-images.githubusercontent.com/64766627/168527409-990a8bc2-2dce-4669-99c2-c02686bb0b44.png)
+ここまでやって気づいたけど，小文字は全部消してよさそう．するとこんな感じに<br>
+CCCPPPAAAWWW{{{MMMGGGRRREEEPPP}}}<br>
+Flagの形式的に，全て小文字でcpaw{...}となるはずなので，小文字変換して重複を消すとFlagゲット
+<details>
+<summary>Q18のこたえ</summary>
+
+cpaw{mgrep}
 </details>
 
 ---
