@@ -13,6 +13,8 @@
 - quipqiup
 - CyberChef
 - Cipher Identifier
+- msieve<br>
+  素因数分解に使える．RSA暗号を力技で解読したいときとかにどうぞ．オプションは[こちら](https://stdkmd.net/nrr/msieve_ja.htm)
 
 ## Reverse Engineering
 - Ghidra
