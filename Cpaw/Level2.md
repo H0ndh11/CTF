@@ -5,6 +5,7 @@
   - [Q16.\[Network+Forensic\] HTTP](#q16networkforensic-http)
   - [Q17.\[Recon\] Who am I ?](#q17recon-who-am-i-)
   - [Q18.\[Forensic\] leaf in forest](#q18forensic-leaf-in-forest)
+  - [Q19.\[Misc\] Image!](#q19misc-image)
   
 ---
 <br><br>
@@ -90,6 +91,20 @@ Flagの形式的に，全て小文字でcpaw{...}となるはずなので，小�
 <summary>Q18のこたえ</summary>
 
 cpaw{mgrep}
+</details>
+
+---
+<br><br>
+
+## Q19.\[Misc\] Image!
+またまたファイルからflagを探す問題．解凍してみるとフォルダやらxmlのファイルやらが出てくる．一つだけ拡張子のないmymetypeというファイルがあるので，メモ帳で開いてみる．<br><br>
+<img width="527" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/170498287-bd1920d6-3c16-4620-9471-3d9fb9ded780.png"><br><br>
+調べてみたらオープンドキュメントというワードでで引っかかった．どうやらzipの状態で拡張子をodtに変更し，LibraOfficeで開けるらしい．けどなぜか俺のkalilinuxではLibraOfficeで開けなかった．もうすこし調べてみると，Word上でも開けることが分かった．なんか実際の画像とは異なるんだろうけど，これでFlagが入手できた．
+<details>
+<summary>Q18のこたえ</summary>
+
+It_is_fun__isn't_it?<br>
+LibraOfficeで開けなかったのは[これ](https://niszet.hatenablog.com/entry/2020/09/03/083000)が原因かも
 </details>
 
 ---
