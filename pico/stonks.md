@@ -66,7 +66,7 @@ FLAG_BUFFERにflagが格納されているはずなので，%xを連打して取
 まとめてアスキー変換するとこんな感じに(CyberChefを利用)<br><br>
 <img width="479" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/170829532-60ae8f50-d5d0-4709-9b14-4036c2e56a58.png"><br><br>
 
-明らかにflagっぽい文字列が見つかるけど，リトルエンディアンなのか順番が少しだけおかしい．<br><br>
+明らかにflagっぽい文字列が見つかるけど，リトルエンディアンなのか順番が少しだけおかしい．正しい順番で並べるように以下のプログラムを用意．（solvestonks.py）<br><br>
 
 ```
 from ctypes import sizeof
