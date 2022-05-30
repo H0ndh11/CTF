@@ -102,7 +102,7 @@ cpaw{mgrep}
 <img width="527" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/170498287-bd1920d6-3c16-4620-9471-3d9fb9ded780.png"><br><br>
 調べてみたらオープンドキュメントというワードでで引っかかった．どうやらzipの状態で拡張子をodtに変更し，LibraOfficeで開けるらしい．けどなぜか俺のkalilinuxではLibraOfficeで開けなかった．もうすこし調べてみると，Word上でも開けることが分かった．なんか実際の画像とは異なるんだろうけど，これでFlagが入手できた．
 <details>
-<summary>Q18のこたえ</summary>
+<summary>Q19のこたえ</summary>
 
 It_is_fun__isn't_it?<br>
 LibraOfficeで開けなかったのは[これ](https://niszet.hatenablog.com/entry/2020/09/03/083000)が原因かも
@@ -131,6 +131,7 @@ int main(int argc, char* argv[]){
 <br><br>
 引数1に暗号文`ruoYced_ehpigniriks_i_llrg_stae`を，引数2に鍵となる数値を入力することで解読してくれるプログラムのようだ．さらに，for文からiは暗号文の長さ(31)まで，keyの値分増えながらループするようだ．この時点で，keyは1~32の範囲内であることが推測できる．よって次のようにコードを改変する．<br><br>
 ```
+// crypto100ex.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
