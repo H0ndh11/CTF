@@ -160,7 +160,7 @@ int main(int argc, char* argv[]){
 
 ```
 <br><br>
-`gcc crypto100.c -o crypto100`でコンパイルして，実行すると
+`gcc crypto100ex.c -o crypto100`でコンパイルして，ターミナル上で`crypto100.exe ruoYced_ehpigniriks_i_llrg_stae`と実行すると
 ```
 cpaw{ruoYced_ehpigniriks_i_llrg_stae}
 cpaw{urYoec_dheipngriki_s_illgrs_ate}
