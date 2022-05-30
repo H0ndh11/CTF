@@ -6,6 +6,7 @@
   - [Q17.\[Recon\] Who am I ?](#q17recon-who-am-i-)
   - [Q18.\[Forensic\] leaf in forest](#q18forensic-leaf-in-forest)
   - [Q19.\[Misc\] Image!](#q19misc-image)
+  - [Q20.\[Crypto\] Block Cipher](#q20crypto-block-cipher)
   
 ---
 <br><br>
@@ -109,3 +110,68 @@ LibraOfficeで開けなかったのは[これ](https://niszet.hatenablog.com/ent
 
 ---
 <br><br>
+
+## Q20.\[Crypto\] Block Cipher
+暗号解読の問題．まずは与えられたc言語ファイルを見てみる．<br><br>
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main(int argc, char* argv[]){
+  int i;
+  int j;
+  int key = atoi(argv[2]);
+  const char* flag = argv[1];
+  printf("cpaw{");
+  for(i = key - 1; i <= strlen(flag); i+=key) for(j = i; j>= i - key + 1; j--) printf("%c", flag[j]);
+  printf("}");
+  return 0;
+}
+```
+<br><br>
+引数1に暗号文`ruoYced_ehpigniriks_i_llrg_stae`を，引数2に鍵となる数値を入力することで解読してくれるプログラムのようだ．さらに，for文からiは暗号文の長さ(31)まで，keyの値分増えながらループするようだ．この時点で，keyは1~32の範囲内であることが推測できる．よって次のようにコードを改変する．<br><br>
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main(int argc, char* argv[]){
+  int i;
+  int j;
+  int key;
+  //int key = atoi(argv[2]);	//引数2（数字）を文字列から数値への変換
+  const char* flag = argv[1];	//flagに引数1（暗号文）を代入
+  /*つまり
+  crypto100.exe 暗号文 鍵
+  で解読するイメージ
+  */
+  for(key=1;key<=32;key++){
+    printf("cpaw{");
+    /*
+    i=key-1 から i=暗号文の長さ(31) までiを増やしながらループ
+      j=i から j=i-key+1 までjを減らしながらループ
+        j番目のflag文字列を出力
+    */
+    for(i = key - 1; i <= strlen(flag); i+=key) for(j = i; j>= i - key + 1; j--) printf("%c", flag[j]);
+    printf("}\n");
+  }
+  return 0;
+}
+
+```
+<br><br>
+`gcc crypto100.c -o crypto100`でコンパイルして，実行すると
+```
+cpaw{ruoYced_ehpigniriks_i_llrg_stae}
+cpaw{urYoec_dheipngriki_s_illgrs_ate}
+cpaw{ourecYe_diphingkiri_sll__grats}
+cpaw{Your_deciphering_skill_is_great}
+cpaw{cYourhe_deingip_skirrll_iats_g}
+              ：
+            (省略)
+```
+このように，4番目に意味のある英文が現れる．
+<details>
+<summary>Q20のこたえ</summary>
+
+cpaw{Your_deciphering_skill_is_great}
+</details>
