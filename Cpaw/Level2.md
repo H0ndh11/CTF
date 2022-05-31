@@ -7,6 +7,7 @@
   - [Q18.\[Forensic\] leaf in forest](#q18forensic-leaf-in-forest)
   - [Q19.\[Misc\] Image!](#q19misc-image)
   - [Q20.\[Crypto\] Block Cipher](#q20crypto-block-cipher)
+  - [Q21.[Reversing] reversing easy!](#q21reversing-reversing-easy)
   
 ---
 <br><br>
@@ -176,3 +177,26 @@ cpaw{cYourhe_deingip_skirrll_iats_g}
 
 cpaw{Your_deciphering_skill_is_great}
 </details>
+
+---
+<br><br>
+## Q21.[Reversing] reversing easy!
+flagを出力する関数を書き忘れた実行ファイルを渡された．とりあえずファイルのフォーマット確認と実行をやってみる．<br><br>
+![キャプチャ](https://user-images.githubusercontent.com/64766627/171184479-692f24ab-7e8e-4359-8168-862691161e1e.png)<br><br>
+当然これだけでflagは手に入らないが，cpaw{}は出力してくれているみたいだ．ここでGhidraをつかって逆コンパイル，逆アセンブリを試してみる．<br><br>
+<img width="955" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/171186984-af1c086a-ba65-4fb6-a9ab-84447771da38.png">
+<br><br>
+
+main関数の逆コンパイル画面はキャプチャ画面右に表示される．本当は画面真ん中のアセンブリ読んで解析できるようになるといいんだけど，今回はc言語の方を見ます(わかりやすいし)．画像の赤枠内を確認すると，if文内が実行されていないことが分かる．つまり，if文内のputcharで合計9文字分出力されていればflagは完成となるのではないかと予想できる．しかし，9文字の文字列が格納されているであろうlocal_40は，4文字の文字列となっている．つまり，逆コンパイルがうまくいっていないことがわかるので，逆アセンブル画面のスタックも確認する．<br><br>
+<img width="441" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/171189320-e3e7a603-ade5-40f4-9aa9-af2490cf99dd.png"><br><br>
+local_40から9文字分なので，local_20までで，`79 61 6b 69 6e 69 6b 75 21`<br>
+アスキー文字に変換すると，`yakiniku!`
+あとはcpaw{}で囲めばクリア
+<details>
+<summary>Q21のこたえ</summary>
+
+cpaw{yakiniku!}
+</details>
+
+---
+<br><br>
