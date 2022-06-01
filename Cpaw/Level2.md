@@ -9,6 +9,7 @@
   - [Q20.\[Crypto\] Block Cipher](#q20crypto-block-cipher)
   - [Q21.[Reversing] reversing easy!](#q21reversing-reversing-easy)
   - [Q22.[Web] Baby's SQLi - Stage 1 -](#q22web-babys-sqli---stage-1--)
+  - [Q28.[Network] Can you login ?](#q28network-can-you-login-)
   
 ---
 <br><br>
@@ -211,3 +212,30 @@ cpaw{yakiniku!}
 cpaw{palloc_escape_from_stage1;(}<br><br>
 stage2へのurlも見つかった．これは後の問題で使われる．
 </details>
+
+---
+<br><br>
+## Q28.[Network] Can you login ?
+まずは与えられたpcapファイルをwiresharkで開く．するとDNSパケットを境に2回のFTPサーバに対してTCP通信が行われていることがわかる．右クリック -> 追跡 -> TCPストリームで表示してみると，1つ目は<br><br>
+<img width="749" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/171319331-fcc63937-83a9-4b1b-b7b0-b602b2f804ca.png"><br><br>
+ログイン認証に失敗していることが分かる．続いて2つ目は<br><br>
+<img width="749" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/171319463-60b1c632-aa08-46ae-bb60-384be1cd13aa.png"><br><br>
+ログイン認証に成功している．これでログインするためのIDとパスワードがわかった．あとは肝心のFTPサーバのアドレスとポートだが，これはパケットを確認すればすぐにわかる．(というかFTPはウェルノウンポートで21だった)<br><br>
+<img width="769" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/171319960-870216bb-73e5-453f-b2e6-2fab9a23996f.png"><br><br>
+たとえば，接続直後のwelcomeと送信されたパケットを見ると，赤枠で囲まれた部分がIPアドレスとポートになる．ここに接続してログイン認証を突破してみよう．ターミナルでnetcatコマンドでつなげてもいいんだけど，今回はWinSCPがGUIでわかりやすいのでそちらを使う．<br><br>
+<img width="470" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/171320502-3bdd152e-5e1f-439b-9e5c-cd2b9bfe9a8c.png"><br><br>
+これまでに手に入った情報を使って空欄を埋め，ログイン．<br><br>
+<img width="403" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/171320656-328bbf02-7df7-48d2-90c6-f6027563e837.png"><br><br>
+パケットにもあったけど，ダミーファイルがあるみたいだからまずはそれを開く．<br><br>
+<img width="401" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/171320777-4de122cc-494a-452f-85b5-5add782139fe.png"><br><br>
+flagはこのディレクトリの中に存在する．しかしディレクトリ内にファイルはdummyしか無いように見える．そこで，隠しファイルの表示もしてみる．winSCPの環境設定->パネルにチェック項目があるので，そこから隠しファイルを表示してあげると<br><br>
+<img width="401" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/171321085-97e1c07e-3920-4d4c-a336-9d47437ba47f.png"><br><br>
+やはりもう1つのファイルが見つかった．こいつを表示すればflagが手に入る．
+<details>
+<summary>Q28のこたえ</summary>
+
+cpaw{f4p_sh0u1d_b3_us3d_in_3ncryp4i0n}
+</details>
+
+---
+<br><br>
