@@ -8,6 +8,7 @@
   - [Q19.\[Misc\] Image!](#q19misc-image)
   - [Q20.\[Crypto\] Block Cipher](#q20crypto-block-cipher)
   - [Q21.[Reversing] reversing easy!](#q21reversing-reversing-easy)
+  - [Q22.[Web] Baby's SQLi - Stage 1 -](#q22web-babys-sqli---stage-1--)
   
 ---
 <br><br>
@@ -180,6 +181,7 @@ cpaw{Your_deciphering_skill_is_great}
 
 ---
 <br><br>
+
 ## Q21.[Reversing] reversing easy!
 flagを出力する関数を書き忘れた実行ファイルを渡された．とりあえずファイルのフォーマット確認と実行をやってみる．<br><br>
 ![キャプチャ](https://user-images.githubusercontent.com/64766627/171184479-692f24ab-7e8e-4359-8168-862691161e1e.png)<br><br>
@@ -200,3 +202,12 @@ cpaw{yakiniku!}
 
 ---
 <br><br>
+
+## Q22.[Web] Baby's SQLi - Stage 1 -
+適切なSQL文を入力し，flagを取り出す問題．[ここ](https://job-support.ne.jp/blog/sql/datebese)とか見ながらSQL文を書いてみよう．palloc_homeと呼ばれるテーブルを表示すればよいので，`SELECT * FROM palloc_home`と入力する．
+<details>
+<summary>Q22のこたえ</summary>
+
+cpaw{palloc_escape_from_stage1;(}<br><br>
+stage2へのurlも見つかった．これは後の問題で使われる．
+</details>
