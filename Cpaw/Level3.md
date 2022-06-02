@@ -1,6 +1,7 @@
 # Level3
 - [Level3](#level3)
   - [Q23.\[Reversing\] またやらかした！](#q23reversing-またやらかした)
+  - [Q24.\[Web\] Baby's SQLi - Stage 2 -](#q24web-babys-sqli---stage-2--)
 
 ---
 <br><br>
@@ -18,3 +19,24 @@ stringに格納されている文字列を1文字づつ，00011001と排他的�
 
 cpaw{vernam!!}
 </details> 
+
+---
+<br><br>
+
+## Q24.\[Web\] Baby's SQLi - Stage 2 -
+Level2のQ22から，Stage2に進むためのurlを入手しているので，まずはそのページにアクセス．するとログイン認証を突破できればflagが手に入ることがわかる．まずはログイン認証問題の定番で，ユーザー名pristeruの後ろに文字列終了の'とコメントアウトの--を追加し，`prisuteru'--`とし，パスワードには適当な文字をいれてみる．<br><br>
+<img width="623" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/171566058-ab8052fb-54a6-4aed-99e5-eeb1137c8e66.png"><br><br>
+なんとたったこれだけで突破することができた．一応原理としては，本来ならば<br>
+`SELECT * FROM users WHERE username = 'porisuteru' AND password = '本来のパスワード'`<br>
+というクエリを送信し，usernameとpasswordが一致するデータを返すようになっている．しかし，今回入力した結果<br>
+`SELECT * FROM users WHERE username = 'porisuteru'--' AND password = 'abc'`<br>
+というクエリが生成されてしまう．これにより--より後ろはコメントアウト，すなわち処理側が無視する文字列となってしまい，usernameのみ一致すればログインできてしまうということになるのだ．
+
+<details>
+<summary>Q24のこたえ</summary>
+
+cpaw{p@ll0c_1n_j@1l3:)}
+</details> 
+
+---
+<br><br>
