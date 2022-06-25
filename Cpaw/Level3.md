@@ -2,6 +2,7 @@
 - [Level3](#level3)
   - [Q23.\[Reversing\] またやらかした！](#q23reversing-またやらかした)
   - [Q24.\[Web\] Baby's SQLi - Stage 2 -](#q24web-babys-sqli---stage-2--)
+  - [Q26.\[PPC\] Remainder theorem](#q26ppc-remainder-theorem)
 
 ---
 <br><br>
@@ -40,3 +41,5 @@ cpaw{p@ll0c_1n_j@1l3:)}
 
 ---
 <br><br>
+
+## Q26.\[PPC\] Remainder theorem
