@@ -90,3 +90,11 @@ gcc -o q26 q26.c
 ~~~
 <br>
 実行すればxの値が求まる．（コンパイル済の実行ファイルは同ディレクトリのq26.exe）
+
+<details>
+<summary>q26の答え</summary>
+cpaw{35430270439}
+<br><br>
+<img width="428" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/175774691-b36d4abb-385e-4e4d-9e81-ea2f45f5b084.png">
+
+</details>
