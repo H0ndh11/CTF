@@ -4,7 +4,6 @@
   - [Q24.\[Web\] Baby's SQLi - Stage 2 -](#q24web-babys-sqli---stage-2--)
   - [Q26.\[PPC\] Remainder theorem](#q26ppc-remainder-theorem)
   - [Q29.\[Crypto\] Common World](#q29crypto-common-world)
-- [m=??](#m)
 
 ---
 <br><br>
@@ -109,7 +108,6 @@ cpaw{35430270439}
 RSA暗号らしきものを解読する問題．問題文に添付されたファイルを見てみると，同じNが使われたRSA暗号らしきヒントが得られる．この時点で自分は全然ピンと来ておらず，時間はかかったがRSAと問題文にあるCommonで検索すると，RSA common modulus attackという攻撃を見つけた．どうやら共通の平文とNのRSA暗号が2つあれば平文を解読することができるらしい．理屈は比較的簡単で，[ここ](https://elliptic-shiho.hatenablog.com/entry/2015/12/14/043745)を見れば一発で理解できた．これを元に，解読するスクリプトを書いてみる．(同ディレクトリのq29.py)<br><br>
 
 ~~~
-# m=??
 e1=11
 e2=13
 N=236934049743116267137999082243372...
