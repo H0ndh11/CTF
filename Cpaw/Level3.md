@@ -105,7 +105,7 @@ cpaw{35430270439}
 <br><br>
 
 ## Q29.\[Crypto\] Common World
-※別解あり<br>
+※別解あり（Low Public-Exponent Attack）<- こっちも簡単<br>
 RSA暗号らしきものを解読する問題．問題文に添付されたファイルを見てみると，同じNが使われたRSA暗号らしきヒントが得られる．この時点で自分は全然ピンと来ておらず，時間はかかったがRSAと問題文にあるCommonで検索すると，RSA common modulus attackという攻撃を見つけた．どうやら共通の平文とNのRSA暗号が2つあれば平文を解読することができるらしい．理屈は比較的簡単で，[ここ](https://elliptic-shiho.hatenablog.com/entry/2015/12/14/043745)を見れば一発で理解できた．これを元に，解読するスクリプトを書いてみる．(同ディレクトリのq29.py)<br><br>
 
 ~~~
@@ -131,8 +131,10 @@ print(m)
 
 <details>
 <summary>q29の答え</summary>
-cpaw{424311244315114354}
+cpaw{424311244315114354}<br><br>
+これでCpawCTF完全制覇だ！！！
 </details>
+<br>
 <details>
 <summary>おまけ~flagの意味~</summary>
 復号した結果，424311244315114354という文字列だったが，果たしてどんな意味があるのだろう？？1~5の数字しか使われていないので，鋭い人は閃くのかもしれないが，自分にはさっぱりわからなかったので，暗号を推測してくれるCipherIdentifier(https://www.dcode.fr/cipher-identifier)というwebサイトに投げた．<br><br>
