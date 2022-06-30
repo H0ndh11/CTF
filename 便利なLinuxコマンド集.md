@@ -7,6 +7,7 @@ CTFでよく使うコマンドを書いておく場所．コマンドとオプ�
   - [netcat nc](#netcat-nc)
   - [curl](#curl)
   - [binwalk](#binwalk)
+  - [gobuster](#gobuster)
 
 ## file
 `file [ファイル名]`<br>
@@ -35,3 +36,8 @@ URL先のファイルを取得して表示したりダウンロードしたり�
 `binwalk [file]`<br>
 抽出したいときは<br>
 `binwalk -D='.*' [file]`<br>
+
+## gobuster
+Webアプリケーションのパスをワードリストから総当たりで探してくれるツール．問題によっては使用禁止．<br>
+`gobuster dir -u [URL] -w [wordlistのパス]`<br>
+wordlistは大抵/usr/share/wordlists内にある．kalilinuxなら標準で付属しているはず．
