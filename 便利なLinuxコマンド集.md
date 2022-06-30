@@ -6,6 +6,7 @@ CTFでよく使うコマンドを書いておく場所．コマンドとオプ�
   - [string](#string)
   - [netcat nc](#netcat-nc)
   - [curl](#curl)
+  - [binwalk](#binwalk)
 
 ## file
 `file [ファイル名]`<br>
@@ -28,3 +29,9 @@ CTFでよく使うコマンドを書いておく場所．コマンドとオプ�
 ## curl
 `curl [URL]`<br>
 URL先のファイルを取得して表示したりダウンロードしたりできる．sqlインジェクションによく使うのかな．あんまりよくわかってないから言語化できたら更新します．オプションは[ここ](https://qiita.com/ryuichi1208/items/e4e1b27ff7d54a66dcd9)がわかりやすい．
+
+## binwalk
+ファイルの中に隠れているファイルを見つけることができる．主にフォレンジックの問題で使われる．探すときは<br>
+`binwalk [file]`<br>
+抽出したいときは<br>
+`binwalk -D='.*' [file]`<br>
