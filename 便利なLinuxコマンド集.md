@@ -40,6 +40,6 @@ URL先のファイルを取得して表示したりダウンロードしたり�
 ## gobuster, ffuf, dirb
 Webアプリケーションのコンテンツをワードリストから総当たりで探してくれるツール．問題によっては使用禁止．<br>
 `gobuster -u [URL] -w [wordlistのパス]`<br>
-`ffuf -w [wordlistのパス] -u [URL]/FUZZ`
-`dirb [URL] [wordlistのパス]`
+`ffuf -w [wordlistのパス] -u [URL]/FUZZ`<br>
+`dirb [URL] [wordlistのパス]`<br>
 wordlistは大抵/usr/share/wordlists内にある．kalilinuxなら標準で付属しているはず．
