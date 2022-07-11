@@ -7,7 +7,7 @@ controlCar(scanArray)の返り値には-1,0,1のいずれかであり，それ�
 
 ここからプログラムの組み方を解説をしていくが，スクリプトのみ確認したい場合はこちらの[drive.js](https://github.com/H0ndh11/CTF/blob/main/GoogleBeginnersQuest/drive.js)へ．<br><br>
 
-以上を踏まえると，スクリプトは2つのステップに分けて書いていくのがよさそう．step1ではscanArrayから通れそうな道を探す．step2では通れそうな道に向かってハンドルを操作する．step1はこのように書いた．<br><br>
+以上を踏まえると，スクリプトは2つのステップに分けて書いていくのがよさそう．step1ではscanArrayから通れそうな車線を探す．step2では通れそうな車線に向かってハンドルを操作する．step1はこのように書いた．<br><br>
 
 ~~~
 //step1:2つ以上の連続するindexで共に最も大きい値をとるものを探す(iはその中で最も小さい値)
@@ -37,4 +37,11 @@ else{
 }
 ~~~
 <br>
-これは解説するまでもないが，step1で安全な車線が分かったので7を基準にしてmax_indexの値によってハンドルをきる方向を判断している．
+これは解説するまでもないが，step1で安全な車線が分かったので7を基準にしてmax_indexの値によってハンドルをきる方向を判断している．よって，step1とstep2をつなげたものが解答のスクリプトとなる．<br><br>
+
+<details>
+<summary>Q3.High Speed Chaseの答え</summary>
+CTF{cbe138a2cd7bd97ab726ebd67e3b7126707f3e7f}<br><br>
+<img width="960" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/178176864-f2466c4b-9215-4ce3-be34-dd7d576bcf5d.png">
+
+</details>
