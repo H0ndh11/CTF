@@ -1,3 +1,5 @@
+# Q3. High Speed Chase
+
 <img width="960" alt="キャプチャ" src="https://user-images.githubusercontent.com/64766627/178144112-1334c2dd-42d2-4a65-9aea-17fd911a0170.png"><br><br>
 
 自動運転プログラムを作る問題．画像左上が自分の車で，前にいる車をぶつからずに追い抜く．右の説明にもあるように，scanArrayには以下の画像のような距離を示す値が配列として格納されている．なお，scanArray\[8\]は常に自身の車の中心を表すため，自身が移動すればscanArrayの各値が示す距離の位置も変わる．<br><br>
