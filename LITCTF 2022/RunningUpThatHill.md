@@ -12,7 +12,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_{}
 A8FC7A{H7_ZODCEND_8F_CCQV_RTTVHD}
 ~~~
 
-これ見てさっぱり分からなかったが，コンテスト終了後にdiscordを覗きに行くとどうやらhill sipherと呼ばれる暗号方式があるみたいだ．テキストファイル1行目の'A'~'}'を0~38とし，行列の積とmod39を用いて計算すればflagが入手できそう．逆行列求めるのもコード書くのも面倒なので[ここ](https://www.dcode.fr/hill-cipher)で自動復号．なんて便利なんだ...
+これ見てさっぱり分からなかったが，コンテスト終了後にdiscordを覗きに行くとどうやらhill sipherと呼ばれる暗号方式があるみたいだ．テキストファイル1行目の'A'～'}'を0～38とし，行列の積とmod39を用いて計算すればflagが入手できそう．逆行列求めるのもコード書くのも面倒なので[ここ](https://www.dcode.fr/hill-cipher)で自動復号．なんて便利なんだ...
 
 <details>
 <summary>答え</summary>
