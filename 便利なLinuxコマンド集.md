@@ -33,10 +33,14 @@ URL先のファイルを取得して表示したりダウンロードしたり�
 
 ## objdump
 実行ファイルの解析用．<br>
-`objdump -d -M intel hoge > hoge.txt`<br>
+`objdump -d -M intel [file] > hoge.txt`<br>
 でintel記法のアセンブリがhoge.txtに出力される．逆にAT&T記法であれば<br>
-`objdump -d hoge > hoge.txt`<br>
+`objdump -d [file] > hoge.txt`<br>
 -dは逆アセンブルのオプション．その他のオプションは[こちら](https://linuxcommand.net/objdump/)
+
+## hexdump
+`hexdump -C [file]`
+メモリダンプ．`-C`でアスキー文字列も右側に表示してくれる．
 
 ## binwalk
 ファイルの中に隠れているファイルを見つけることができる．主にフォレンジックの問題で使われる．探すときは<br>
