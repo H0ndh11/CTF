@@ -6,6 +6,8 @@ CTFでよく使うコマンドを書いておく場所．コマンドとオプ�
   - [string](#string)
   - [netcat nc](#netcat-nc)
   - [curl](#curl)
+  - [objdump](#objdump)
+  - [hexdump](#hexdump)
   - [binwalk](#binwalk)
   - [gobuster, ffuf, dirb](#gobuster-ffuf-dirb)
 
