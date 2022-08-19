@@ -31,6 +31,13 @@ CTFでよく使うコマンドを書いておく場所．コマンドとオプ�
 `curl [URL]`<br>
 URL先のファイルを取得して表示したりダウンロードしたりできる．sqlインジェクションによく使うのかな．あんまりよくわかってないから言語化できたら更新します．オプションは[ここ](https://qiita.com/ryuichi1208/items/e4e1b27ff7d54a66dcd9)がわかりやすい．
 
+## objdump
+実行ファイルの解析用．<br>
+`objdump -d -M intel hoge > hoge.txt`<br>
+でintel記法のアセンブリがhoge.txtに出力される．逆にAT&T記法であれば<br>
+`objdump -d hoge > hoge.txt`<br>
+-dは逆アセンブルのオプション．その他のオプションは[こちら](https://linuxcommand.net/objdump/)
+
 ## binwalk
 ファイルの中に隠れているファイルを見つけることができる．主にフォレンジックの問題で使われる．探すときは<br>
 `binwalk [file]`<br>
