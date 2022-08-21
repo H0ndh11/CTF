@@ -8,6 +8,7 @@ CTFでよく使うコマンドを書いておく場所．コマンドとオプ�
   - [curl](#curl)
   - [objdump](#objdump)
   - [hexdump](#hexdump)
+  - [socat](#socat)
   - [binwalk](#binwalk)
   - [gobuster, ffuf, dirb](#gobuster-ffuf-dirb)
 
@@ -43,6 +44,13 @@ URL先のファイルを取得して表示したりダウンロードしたり�
 ## hexdump
 `hexdump -C [file]`
 メモリダンプ．`-C`でアスキー文字列も右側に表示してくれる．
+
+## socat
+pwnで使用．問題の実行ファイルを実行する際に，tcp通信に変換してくれる．<br>
+`socat tcp-l:7777,reuseaddr,fork system:./[file]`<br>
+別ウィンドウを開き<br>
+`nc localhost 7777`<br>
+で接続できる．
 
 ## binwalk
 ファイルの中に隠れているファイルを見つけることができる．主にフォレンジックの問題で使われる．探すときは<br>
