@@ -64,3 +64,8 @@ Webアプリケーションのコンテンツをワードリストから総当�
 `ffuf -w [wordlistのパス] -u [URL]/FUZZ`<br>
 `dirb [URL] [wordlistのパス]`<br>
 wordlistは大抵/usr/share/wordlists内にある．kalilinuxなら標準で付属しているはず．
+
+## steghide
+画像や音声ファイルに対して情報を埋め込んだり，取り出したりすることができる．<br>
+`steghide exract -sf [情報が埋め込まれたファイル]`<br>
+このあとにパスワードが求められるので正しい文字列を与えられれば取り出すことができる．
