@@ -1,0 +1,12 @@
+Q1: kkctf{w3lcome_2_kkctf_f82mz78}
+Q2: kkctf{ascii_ASCII_f3l01jcn4a17}
+Q3: kkctf{スキュタレー暗号}
+Q4: kkctf{Chain_of_Ciphers}
+Q5: kkctf{BlindT0uchB3ginner}
+Q6: kkctf{doria&pasta}
+Q7: kkctf{Gateway_2_St3gan0graphy}
+Q8: kkctf{hokkaido_sapporo}
+Q9: kkctf{t00_3asy_for_U_fn71z8}
+Q10:kkctf{n1ce_r3versing!!_f84kv02mx7}
+Q11:kkctf{wow!_c0ngratulation_f1639}
+Q12:kkctf{01811121417202427293340414750515354567779808193991001011071111231472973524045551024}
